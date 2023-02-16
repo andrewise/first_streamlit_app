@@ -60,9 +60,9 @@ streamlit.stop()
 # Lesson 12 Challenge
 def insert_row_snowflake(new_fruit):
    with my_cnx.cursos() as my_cur:
-   my_cur.execute("use warehouse compute_wh")
-   my_cur.execute("insert into fruit_load_list values ('from streamlit')")
-   return "Thanks for adding " + new_fruit
+        my_cur.execute("use warehouse compute_wh")
+        my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+        return "Thanks for adding " + new_fruit
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 if streamlit.button('Add a Fruit to the List'):
