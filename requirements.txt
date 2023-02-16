@@ -1,6 +1,7 @@
 # requirements.txt
--r https://raw.githubusercontent.com/snowflakedb/snowflake-connector-python/v2.7.9/tested_requirements/requirements_39.reqs
-snowflake-connector-python[pandas]-pyarrow<8.1.0,>=8.0.0
+
+snowflake-connector-python[pandas]
+pyarrow<8.1.0,>=8.0.0
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
